@@ -1,0 +1,54 @@
+:root{
+    --theme-main-prime:#336699;
+    --theme-main-light:#AAD3ED;
+    --theme-secondary:#E37B1B;
+    
+    
+}
+
+
+*{
+    font-family: 'Roboto', sans-serif;
+
+}
+
+
+.title {
+    margin:20px 0;
+}
+
+.title> h3{
+    border-bottom:2px solid black;
+    width:220px;
+
+}
+
+
+.nav-container  button{
+    color:white;
+    font-size:20px;
+}
+.nav-container .col-12{
+    padding:0;
+}
+
+.nav-container .btn:hover{
+    color:white;
+}
+.nav-item{
+    margin:0 20px;
+}
+
+nav{
+    background-color:var(--theme-main-prime);
+    height:45px;
+    flex-wrap:nowrap;
+}
+nav ul{
+    height:100%;
+}
+a.dropdown-item:hover{
+    background-color:var(--theme-main-light);
+
+}
+
