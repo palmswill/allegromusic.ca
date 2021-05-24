@@ -4,21 +4,26 @@
     --theme-main-light:#AAD3ED;         /* Light Blue */
     --theme-secondary:#E37B1B;          /* Gold (BRANDING COLOR) */
     --theme-secondary-dark: #AE6019;    /* Dark Gold / brown */
+    --theme-secondary-light: #FFE66B;   /*Light Gold*/
+    --theme-main-thread:#F1F7FF;
 }
 
-
+body{
+    color:var(--theme-secondary-light);
+    background-color: var(--theme-main-prime);
+}
 *{
     font-family: 'Roboto', sans-serif;
 }
 
 /* Header */
 .title {
-    margin:30px 0;
+    margin:10px 0;
 }
 
 .contact-title {
     text-align: right;
-    margin: 40px 0;
+    margin-top: 30px;
 }
 
 .phone {
@@ -30,23 +35,24 @@
 
 .btn-gold {
     background-color: var(--theme-secondary);
+    color:white;
 }
+
 
 .btn-gold:hover {
     background-color: var(--theme-secondary-dark);
 }
 
-.title> h3{
-    border-bottom:2px solid black;
-    width: 210px;
+.title> h4{
+    border-bottom:2px solid var(--theme-secondary);
+    width: 230px;
+    font-weight:bold;
 }
 
 
-/* Navigation bar */
-.nav-container  button{
-    color:white;
-    font-size:20px;
-}
+
+
+
 .nav-container .col-12{
     padding:0;
 }
@@ -57,12 +63,22 @@
 .nav-item{
     margin:0 20px;
 }
-
-nav{
-    background-color:var(--theme-main-prime);
-    height:45px;
+/* Navigation bar */
+nav#main-nav{
+    background-color:var(--theme-main-light);
+    margin:5px 0px;
+    padding:5px;
+    overflow:hidden;
+    height:50px;
     flex-wrap:nowrap;
 }
+nav#main-nav  button{
+    color:var(--theme-secondary);
+    font-size:20px;
+    font-weight:bold;
+}
+
+
 nav ul{
     height:100%;
 }
@@ -71,3 +87,56 @@ a.dropdown-item:hover{
 
 }
 
+/* BreadCrumb */
+.breadcrumb{
+    background-color:transparent;
+    text-decoration:none;
+    color:var(--theme-secondary-light)
+}
+.breadcrumb a{
+    text-decoration:none;
+    color:var(--theme-secondary-light)
+
+}
+
+
+.breadcrumb-item+.breadcrumb-item::before {
+    color:var(--theme-main-light);
+    content: ">";
+}
+
+
+/*main display*/
+.main{
+    min-width:960px;
+    max-width:1200px;
+}
+
+
+/* tabs */
+.nav-item{
+    margin:0px;
+    margin-right:20px;
+}
+.nav-item button{
+    background-color:var(--theme-main-light);
+    color:var(--theme-secondary-dark);
+    font-weight:bold;
+    min-width:140px;
+
+}
+
+.nav-tabs button.active{
+    background-color:var(--theme-main-thread) !important;
+    color:var(--theme-secondary-dark) !important;
+}
+
+.main .tab-content{
+    background-color:var(--theme-main-thread);
+    min-height:1500px;
+    border-radius:5px;
+    transform: translateY(-5px);
+    padding:10px;
+    
+
+}
